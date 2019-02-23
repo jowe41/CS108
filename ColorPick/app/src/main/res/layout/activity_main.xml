@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/colorInfo"
+        android:background="#000000"
+        />
+
+    <TextView
+        android:id="@+id/colorInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Red: 0, Green: 0, Blue: 0"
+        android:textSize="20sp"
+        android:layout_above="@+id/line1"
+        />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/line2"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="Red: "
+            android:textSize="15sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:id="@+id/RedBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="255"
+            android:progress="0"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/line3"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="Green: "
+            android:textSize="15sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:id="@+id/GreenBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="255"
+            android:progress="0"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_above="@id/button"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="Blue: "
+            android:textSize="15sp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:id="@+id/BlueBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="255"
+            android:progress="0"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="CHANGE COLOR"
+        android:onClick="changeColor"
+        />
+
+
+
+
+</RelativeLayout>
