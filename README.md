@@ -1,2 +1,2 @@
 # CS108
-cs108 hw
+cs108 hw/project
